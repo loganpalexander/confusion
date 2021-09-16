@@ -1,12 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
 
+const DISHES: Dish[] = [
+  
+];
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  dishes = DISHES;
+  selectedDish = DISHES[0];
   dishes: Dish[] = [
     {
       id: '0',
